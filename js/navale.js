@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
 // Données modifiable
 const rows = 7;
 const cols = 7;
-let Shot = 20;
+let Shot = 15;
 let boats = [
     // Exemple de boat
     {
@@ -56,6 +56,12 @@ let boats = [
 let started = false;
 const overlay = document.getElementById("overlay");
 const text = document.getElementById('text');
+const hardmodeBTN = document.getElementById('hardmode');
+
+hardmodeBTN.addEventListener('click', () => {
+    Shot = hardmodeBTN.checked ? 10 : 15;
+    textRefresh();
+})
 
 // Création du terrain
 function initialize(){
@@ -216,7 +222,7 @@ function Play(){
         element.classList.remove('miss');
     });
     overlay.style.display = 'none';
-    Shot = 15;
+    Shot = hardmodeBTN.checked ? 10 : 15 ;
     started = true;
     createBoat();
     textRefresh();
