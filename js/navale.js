@@ -232,7 +232,7 @@ function textRefresh(){
     if(Shot === 0){
         chrono.innerHTML = `Vous n'avez plus de tir !!!`;
     }
-    if(!started && Shot<0){
+    if(!started && Shot>0){
         chrono.innerHTML = `Vous avez gagné !!!`;
     }
 }
