@@ -90,7 +90,6 @@ function initialize(){
 function createBoat(){
     for(let boat of boats){
         let directionInt = getRandomInt(0,1);
-        console.log(directionInt);
         let direction = (directionInt === 0) ? 'horizontal' : 'vertical';
         boat.position.direction = direction;
         let error = true;
@@ -120,7 +119,6 @@ function createBoat(){
         }
         boat.positions = trypositions;
     }
-    console.log(boats);
 }
 
 function canExist(x,y){
