@@ -55,6 +55,7 @@ let boats = [
 // Ne pas toucher
 let started = false;
 const overlay = document.getElementById("overlay");
+const text = document.getElementById('text');
 
 // Création du terrain
 function initialize(){
@@ -205,6 +206,7 @@ function winGame(){
         element.classList.remove('hit');
         element.classList.remove('miss');
     });
+    text.innerHTML = `Vous avez gagné !!!`;
 }
 
 function Play(){
@@ -227,12 +229,8 @@ function getRandomInt(min, max) {
 
 // Affichage Text 
 function textRefresh(){
-    const chrono = document.getElementById('text');
-    chrono.innerHTML = `Tir(s) restant(s) : ${Shot}`;
+    text.innerHTML = `Tir(s) restant(s) : ${Shot}`;
     if(Shot === 0){
-        chrono.innerHTML = `Vous n'avez plus de tir !!!`;
-    }
-    if(!started && Shot>0){
-        chrono.innerHTML = `Vous avez gagné !!!`;
+        text.innerHTML = `Vous n'avez plus de tir !!!`;
     }
 }
