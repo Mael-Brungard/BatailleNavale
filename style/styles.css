@@ -1,0 +1,50 @@
+/* Estilos básicos - Go Live Server */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0px;
+    line-height: 1.6;
+    min-height: 100vh;
+}
+.container{
+    height: 100vh;
+}
+h1 {
+    color: #333;
+    border-bottom: 2px solid #007acc;
+    padding-bottom: 10px;
+}
+.cell {
+    width: 75px;
+    height: 75px;
+    border: 1px solid black;
+}
+.cell:hover {
+    box-shadow: inset 0 0 5px lightblue;
+}
+.hit{
+    background-color: greenyellow;
+}
+.miss{
+    background-color: tomato;
+}
+button{
+    font-size: 1.5rem !important;
+}
+.On{
+    display: block !important;
+}
+table {
+    border-collapse: collapse;
+    border: 1px solid #ccc;
+    cursor: crosshair;
+}
+.overlay{
+    position: fixed;
+    padding: 10px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: fit-content;
+    width: fit-content;
+}
